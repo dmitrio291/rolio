@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-@@include('components/page/_1_head.html',{
-'title': 'Easy webdev startpack - test',
-'description': 'Easy webdev startpack by budfy',
-'keywords': 'Webdev, Gulp4, html, css, js, jquery',
-'favicon': 'img/favicon.png'
+@@include('components/page/_1_head.html', {
+	'title': 'R-olio',
+	'description': 'Spiced olive oil',
+	'keywords': '',
+	'favicon': 'img/favicon'
 })
 
-<body>
+<body class="mainpage flex --align-center --just-space">
 	@@include('components/page/_2_header.html')
-	<main class="main">
+	<main class="main" id="main">
+		<section class="top-slider --salat" id="slider">
+			<div class="swiper-container top-slider__slider">
+				<div class="top-slider__header">
+					<h2 class="top-slider__title section-title">Наши продукты</h2>
+					<div class="swiper-pagination flex --align-center --just-space"></div>
+				</div>
+				<div class="swiper-wrapper">
+					@@loop('components/bem-blocks/top-slider/_top-slider.html', 'components/content/products.json')
+				</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+		</section>
+		<section class="products" id="products">
+			<h2 class="products__title section-title">Масло</h2>
+			@@loop('components/bem-blocks/product-card/_product-card.html', 'components/content/products.json')
+		</section>
+		@@include('components/page/_section-about.html')
+		@@include('components/page/_section-testimonials.html')
+		@@include('components/page/_section-delivery.html')
+		@@include('components/page/_section-contacts.html')
 	</main>
 	@@include('components/page/_3_footer.html')
 	@@include('components/page/_4_scripts.html')

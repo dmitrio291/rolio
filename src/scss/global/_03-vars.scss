@@ -1,1 +1,45 @@
-:root {}
+:root {
+    --color__main-green: #7DA00C;
+    --color__salat: #688800;
+    --color__salat-04: rgba(104, 136, 0, 0.4);
+    --color__salat-light: #BFD087;
+    --color__salat-ultralight: #EDF4D2;
+    --color__italian: #009246;
+    --color__italian-light: #8BDF84;
+    --color__meat: #D73A31;
+    --color__meat-light: #E8847E;
+    --color__east: #E67F10;
+    --color__east-light: #F4B979; 
+    --color__text: #4A4A4A;
+    --color__grey: #949494;
+    --gradient__salat: linear-gradient(320.69deg, #536614 15.36%, #97C20B 84.86%);
+    --gradient__italian: linear-gradient(320.42deg, #076534 15.36%, #00DB69 82.23%);
+    --gradient__meat: linear-gradient(321.31deg, #99160E, 15.37%, #E84239 81.98%);
+    --gradient__east: linear-gradient(324.18deg, #BA6400, 14.36%, #FF9D34 85.34%);
+    --shadow__main: 1.25rem 1.25rem 2rem rgba(0, 0, 0, 0.1);
+    --shadow__about-block: 0.75rem 0.75rem 2.25rem rgba(190, 191, 183, 0.1);
+}
+
+.--salat {
+    --main__color: var(--color__salat);
+    --main__color-light: var(--color__salat-light);
+    --main__gradient: var(--gradient__salat);
+}
+
+.--italian {
+    --main__color: var(--color__italian);
+    --main__color-light: var(--color__italian-light);
+    --main__gradient: var(--gradient__italian);
+}
+
+.--meat {
+    --main__color: var(--color__meat);
+    --main__color-light: var(--color__meat-light);
+    --main__gradient: var(--gradient__meat);
+}
+
+.--east {
+    --main__color: var(--color__east);
+    --main__color-light: var(--color__east-light);
+    --main__gradient: var(--gradient__east);
+}

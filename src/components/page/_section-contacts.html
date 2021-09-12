@@ -1,0 +1,34 @@
+<section class="contacts" id="contacts">
+    <h2 class="contacts__title section-title">Контакты</h2>
+    <address class="contacts__address flex --align-center --just-end">
+        <picture class="contacts__pic">
+            <img src="img/contacts.jpg" alt="" class="contacts__img">
+        </picture>
+        <div class="contacts__address-inner --salat">     
+            <ul class="contacts__list">
+                <li class="contacts__list-item">
+                    <a href="tel:+380661143558" class="contacts__link flex --align-center --svg__phones-before">+38 (066) 11-43-558</a>
+                </li>
+                <li class="contacts__list-item">
+                    <a href="viber://chat?number=%2B380661143558" class="contacts__link flex --align-center --svg__viber-green-before">Viber: +38 (066) 11-43-558</a>
+                </li>
+                <li class="contacts__list-item">
+                    <a href="https://www.facebook.com/r.olio8/" target="_blank" rel="nofollow noreferer" class="contacts__link flex --align-center --svg__facebook-green-before">https://www.facebook.com/r.olio8/</a>
+                </li>
+                <li class="contacts__list-item">
+                    <a href="https://www.instagram.com/r.olio_/" target="_blank" rel="nofollow noreferer" class="contacts__link flex --align-center --svg__instagram-green-before">https://www.instagram.com/r.olio_/</a>
+                </li>
+                <li class="contacts__list-item">
+                    <a href="https://t.me/r_olio" target="_blank" rel="nofollow noreferer" class="contacts__link flex --align-center --svg__telegram-green-before">https://t.me/r_olio</a>
+                </li>
+            </ul>
+            @@include('../bem-blocks/button/_button.html', {
+                'class': {
+                    'bem__elem': 'contacts__btn'
+                },
+                'type': 'button',
+                'text': 'Написать нам'
+            })
+        </div>  
+    </address>
+</section>

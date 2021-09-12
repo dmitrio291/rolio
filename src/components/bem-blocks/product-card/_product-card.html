@@ -1,0 +1,36 @@
+<article class="product-card @@modif flex --just-space --align-center">
+    <div class="product-card__wrapper">
+        <img src="img/products/@@picture.link.png" alt="@@picture.alt" class="product-card__picture">
+    </div>
+    <div class="product-card__inner">
+        <h3 class="product-card__title">@@name</h3>
+        <p class="product-card__descr">@@description</p>
+        <p class="product-card__components">
+            <strong class="product-card__components-title">Состав:</strong> @@components
+        </p>
+        <div class="product-card__container flex --just-space --align-end">
+            @@include('../counter/_counter.html', {
+                'bem_class': 'product-card__counter',
+                'id': @@id
+            })
+            <span class="product-card__volume">@@volume мл.</span>
+            <span class="product-card__price">@@price грн.</span>
+        </div>
+        <div class="product-card__container flex --just-space --align-center">
+            @@include('../button/_button.html', {
+                "class": {
+                    "bem__elem": "product-card__btn"
+                },
+                "type": "button",
+                "text": "В КОРЗИНУ"
+            })
+            @@include('../button/_button.html', {
+                "class": {
+                    "bem__elem": "product-card__btn"
+                },
+                "type": "button",
+                "text": "ЗАКАЗАТЬ В ТГ"
+            })
+        </div>
+    </div>
+</article>

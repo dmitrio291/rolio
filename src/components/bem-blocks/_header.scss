@@ -1,0 +1,108 @@
+.header {
+    position: sticky;
+    top: 0;
+
+    &__round {
+        height: 19.75rem;
+        width: 19.75rem;
+        background-color: var(--color__main-green);
+        border-radius: 50%;
+        position: absolute;
+        top: -3rem;
+        left: calc();
+        z-index: -1;
+        margin-left: -2.25rem;
+        transition: all 1s;
+    }
+
+    &__wrapper {
+        width: 100%;
+        max-width: 96rem;
+        padding: 3.5rem 1rem;
+        margin: 0 auto;
+        transition: all 0.75s;
+    }
+
+    & .menu {
+        font-family: ElMessiri;
+
+        .menu__link {
+            color: var(--color__salat);
+            &:hover {
+                color: var(--color__meat);
+            }
+        }
+    }
+
+    &__logo {
+        padding: 0 4.75rem;
+    }
+
+    & .logo {
+        height: 9.75rem;
+        width: 4.75rem;
+        transition: all 0.75s;
+    }
+
+    &__cart-btn {
+        @include no-btn;
+        @include btn_anim(1.05, 0.95);
+        height: 2.5rem;
+        width: 2.5rem;
+        position: relative;
+        &[data-counter] {
+            &::before {
+                content: attr(data-counter);
+                position: absolute;
+                height: 1.5rem;
+                width: 1.5rem;
+                top: -0.75rem;
+                right: -0.75rem;
+                border-radius: 50%;
+                text-align: center;
+                padding-top: 0.25rem;
+                color: white;
+                background-color: var(--color__meat);
+            }
+        }
+
+    }
+
+    &__cart-icon {
+        height: 100%;
+        width: 100%;
+        transition: all 0.75s;
+        fill: var(--color__salat);
+        object-fit: contain;
+    }
+
+    &.--scroll {
+        z-index: 5;
+        
+        .header__wrapper {
+            padding: 1rem;
+        }
+
+        .header__round {
+            top: 0;
+            left: 0!important;
+            height: 100%;
+            width: 100%;
+            border-radius: 0;
+            margin-left: 0;
+        }
+
+        .logo {
+            height: 5rem;
+            width: 2.5rem;
+        }
+
+        .menu__link {
+            color: white;
+        }
+
+        .header__cart-icon {
+            fill: white;
+        }
+    }
+}

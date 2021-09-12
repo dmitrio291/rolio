@@ -1,0 +1,27 @@
+.counter {
+    &__btn {
+        background: transparent;
+        color: var(--color__text);
+        font-size: 1.5rem;
+        line-height: 1.33;
+        font-weight: 300;
+        border-radius: 0.5rem;
+        padding: 0;
+        border: 1px solid  var(--color__grey);
+        height: 2rem;
+        width: 2rem;
+
+        &:hover {
+            background: transparent;
+            color: var(--main__color);
+        }
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 1.33;
+        color: var(--main__color);
+        margin: 1.5rem;
+    }
+}

@@ -1,0 +1,73 @@
+.top-slide {
+    &__pictures {
+        position: relative;
+        flex: 0 0 38rem;
+        
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include centering('');
+            z-index: 0;
+            border-radius: 50%;
+        }
+
+        &::before {
+            height: 35rem;
+            width: 35rem;
+            background: var(--main__color);
+            opacity: 0.5;
+        }
+
+        &::after {
+            height: 32.5rem;
+            width: 32.5rem;
+            background: var(--main__gradient);
+        }
+    }
+
+    &__picture-main {
+        position: relative;
+        object-fit: contain;
+        height: 40rem;
+        z-index: 2;
+        transform: rotate(10deg);
+    }
+
+    &__picture-sub {
+        z-index: 1;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+    }
+
+    &__info {
+        flex: 0 0 38rem;
+        margin-left: 8rem;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-size: 4rem;
+    }
+
+    &__descr {
+        margin-top: 2rem;
+    }
+
+    &__counter {
+        margin-top: 2rem;
+    }
+
+    &__buttons {
+        margin-top: 2rem;
+    }
+
+    &__btn {
+        & + & {
+            margin-left: 2.5rem;
+        }
+    }
+}

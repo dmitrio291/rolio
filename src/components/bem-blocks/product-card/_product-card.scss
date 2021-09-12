@@ -1,0 +1,98 @@
+.product-card {
+    padding: 1.5rem;
+    flex-direction: column;
+    transition: all 0.24s;
+
+    &__wrapper {
+        margin-bottom: 1rem;
+        position: relative;
+        height: 14.5rem;
+        width: auto;
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            @include centering('h');
+            z-index: 0;
+            transition: all 0.24s;
+            opacity: 0;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transform-origin: center;
+        }
+    }
+
+    &__picture {
+        height: 100%;
+        object-fit: contain;
+        transition: all 0.24s;
+    }
+
+    &__title {
+        color: var(--main__color);
+    }
+
+    &__descr {
+        margin-top: 1rem;
+    }
+
+    &__components {
+        margin-top: 1rem;
+    }
+
+    &__components-title {
+    }
+
+    &__container {
+        margin-top: 1.5rem;
+    }
+
+    &__counter {
+    }
+
+    &__volume {
+        margin-left: auto;
+    }
+
+    &__price {
+        margin-left: 1rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--main__color);
+    }
+
+    &:hover {
+        box-shadow: 0.75rem 0.75rem 2rem rgba(190, 191, 183, 0.1);
+
+        .product-card__wrapper {
+            &::before {
+                opacity: 1;
+                height: 15.75rem;
+                width: 15.75rem;
+                top: -2.5rem;
+                background: var(--main__gradient);
+                transform: translateX(-50%);
+            }
+
+            &::after {
+                height: 17.75rem;
+                width: 17.75rem;
+                top: -3.5rem;
+                background: var(--main__color);
+                box-shadow: 1.25rem 1.25rem 1.875rem rgba(0, 0, 0, 0.1);
+                opacity: 0.2;
+                transform: translateX(-50%);
+            }
+        }
+
+        .product-card__picture {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: scale(1.25) rotate(10deg) translate(-50%, -40%);
+            z-index: 1;
+        }
+    }
+}

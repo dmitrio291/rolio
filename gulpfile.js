@@ -31,9 +31,13 @@ const {
 	strict
 } = require('assert');
 
-const js_plugins = [];
+const js_plugins = [
+	'node_modules/swiper/swiper-bundle.js'
+];
+
 const css_plugins = [
-	'node_modules/normalize.css/normalize.css'
+	'node_modules/normalize.css/normalize.css',
+	'node_modules/swiper/swiper-bundle.css'
 ];
 
 let settings_size = {
@@ -341,7 +345,7 @@ gulp.task('server_html', () => {
 		browser: 'chrome',
 		logPrefix: 'BS-HTML:',
 		logLevel: 'info',
-		open: false
+		open: true
 	})
 });
 

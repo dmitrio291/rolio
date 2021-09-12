@@ -1,0 +1,50 @@
+.top-slider {
+    position: relative;
+    margin-top: -3rem;
+
+    &__title {
+        color: var(--main__color);
+        transition: color all 0.24s;
+        font-size: 2.25rem;
+    }
+
+    &__slider {
+        max-width: 96rem;
+        padding: 3rem 1rem 0;
+        // height: 75vh;
+    }
+
+    &__header {
+        position: relative;
+        z-index: 2;
+        margin-left: auto;
+        max-width: 43rem;
+        margin-bottom: -10rem;
+    }
+
+    .swiper-pagination {
+        margin-top: 2rem;
+        position: static;
+        text-align: left;
+    }
+    
+    .swiper-pagination-bullet {
+        display: block;
+        min-width: 9rem;
+        width: auto;
+        height: auto;
+        color: var(--main__color-light);
+        padding: 0.5rem 1rem;
+        border: 1px solid var(--main__color-light);
+        border-radius: 0;
+        text-align: center;
+        background: transparent;
+        transition: all 0.24s;
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: var(--main__color-light);
+        color: var(--main__color);
+    }
+}
